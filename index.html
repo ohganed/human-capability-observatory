@@ -19,15 +19,27 @@
     </section>
 
     <section>
-      <h2>Labs</h2>
+      <div class="sectionHead"><div><p class="eyebrow">V0.1</p><h2>10 Labs</h2></div><p>結果は能力診断ではなく、この端末で観測された測定値です。</p></div>
       <div class="grid">
         <button class="card" data-lab="time"><span>⏱</span><b>Time Sense</b><small>10秒を時計なしで感じる</small></button>
         <button class="card" data-lab="quantity"><span>●</span><b>Quantity Sense</b><small>一瞬の数量を数えず推定</small></button>
         <button class="card" data-lab="pattern"><span>◇</span><b>Pattern Sense</b><small>隠れた規則の次を予測</small></button>
+        <button class="card" data-lab="reaction"><span>⚡</span><b>Reaction Time</b><small>合図が出てからの反応時間</small></button>
+        <button class="card" data-lab="flash"><span>👁</span><b>Flash Memory</b><small>一瞬見た文字列を保持する</small></button>
+        <button class="card" data-lab="change"><span>↔</span><b>Change Detection</b><small>短時間の変化位置を見つける</small></button>
+        <button class="card" data-lab="rhythm"><span>♪</span><b>Rhythm Sense</b><small>提示テンポを自分のタップで再現</small></button>
+        <button class="card" data-lab="peripheral"><span>⊕</span><b>Peripheral Vision</b><small>中央注視中の周辺刺激を検出</small></button>
+        <button class="card" data-lab="sequence"><span>▦</span><b>Sequence Memory</b><small>点灯した順序を再現する</small></button>
+        <button class="card" data-lab="rotation"><span>↻</span><b>Mental Rotation</b><small>回転した形が同じか判断する</small></button>
       </div>
     </section>
 
     <section id="labPanel" class="panel hidden"></section>
+
+    <section class="panel mapPanel">
+      <div class="sectionHead"><div><p class="eyebrow">OBSERVED DATA</p><h2>Human Perception Map</h2></div><p id="mapNote">Labを行うとここに観測値が蓄積されます。</p></div>
+      <div id="perceptionMap" class="mapGrid"></div>
+    </section>
 
     <section class="panel">
       <div class="row between">
