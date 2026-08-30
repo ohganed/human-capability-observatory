@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Human Capability Observatory</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">HUMAN CAPABILITY OBSERVATORY</p>
+      <h1>自分という人間を観測する研究所</h1>
+      <p class="lead">AIなしで測る。ローカルに記録する。必要なときだけ、自分でデータをAIへ渡す。</p>
+    </header>
+
+    <section class="principle">
+      <strong>原則:</strong> 未知の能力を否定もしない、存在すると決めつけもしない。まず測定し、再現性を見る。
+    </section>
+
+    <section>
+      <h2>Labs</h2>
+      <div class="grid">
+        <button class="card" data-lab="time"><span>⏱</span><b>Time Sense</b><small>10秒を時計なしで感じる</small></button>
+        <button class="card" data-lab="quantity"><span>●</span><b>Quantity Sense</b><small>一瞬の数量を数えず推定</small></button>
+        <button class="card" data-lab="pattern"><span>◇</span><b>Pattern Sense</b><small>隠れた規則の次を予測</small></button>
+      </div>
+    </section>
+
+    <section id="labPanel" class="panel hidden"></section>
+
+    <section class="panel">
+      <div class="row between">
+        <div><h2>Local Data</h2><p id="dataSummary">記録なし</p></div>
+        <div class="actions">
+          <button id="exportBtn">AI分析用JSONを保存</button>
+          <button id="clearBtn" class="secondary">ローカル記録を削除</button>
+        </div>
+      </div>
+      <pre id="recent"></pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
